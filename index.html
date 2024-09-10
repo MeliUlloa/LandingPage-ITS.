@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing page ITS Cipolletti</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Enlace a la librería de iconos Font Awesome (versión 6.0.0-beta3) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+
+  <body>
+    <!-- Título principal con un estilo personalizado y separaciones -->
+    <h2 class="titulo">
+      <span class="dot">.</span>
+      <span class="letter white">i</span>
+      <span class="letter green">t</span>
+      <span class="letter white">s</span>
+  </h2>
+
+    <!-- Menú de navegación lateral con íconos y opciones -->
+    <nav id="lado-nav">
+      <ul>
+        <!-- Icono de "barras" para abrir el menú -->
+        <li class="bars">
+          <span onclick="toggleNav()">
+            <!-- Icono de "barras" (hamburguesa) para el menú -->
+            <i class="fa-solid fa-bars" id="bars"></i>
+          </span>
+        </li>
+
+        <!-- Sección del menú con enlaces -->
+        <div id="nav" class="nav">
+          <ul class="nav-lista">
+            <!-- Cada ítem del menú enlaza a una sección específica o a una página externa -->
+            <li><a href="#about">Inicio</a></li>
+            <li><a href="#services">Instituto</a></li>
+            <li><a href="#contact">Inscripción</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </div>
+      </ul>
+
+      <!-- Lista de íconos de redes sociales -->
+      <ul class="iconos">
+        <!-- Ícono de Facebook -->
+        <li class="facebook">
+          <a href='#'><i class="fa-brands fa-facebook"></i></a>
+        </li>
+        <!-- Ícono de LinkedIn -->
+        <li class="linkedin">
+          <a href='#'><i class="fa-brands fa-linkedin"></i></a>
+        </li>
+        <!-- Ícono de GitHub -->
+        <li class="github">
+          <a href='#'><i class="fa-brands fa-github"></i></a>
+        </li>
+        <!-- Ícono de correo electrónico (arroba) -->
+        <li class="at">
+          <a href='#'><i class="fa fa-at"></i></a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <!-- Contenedor principal con el contenido textual de la página -->
+    <div id="container">
+      <div class="text" id="text-content">
+        <!-- Título del instituto -->
+        <h1 class="titulo">Instituto Técnico Superior</h1>
+        
+        <!-- Subtítulo del instituto -->
+        <h3 class="subtitulo">EDUCACION PUBLICA AL ALCANCE DE TODOS</h3>
+        
+        <!-- Párrafo descriptivo sobre el instituto -->
+        <p class="parrafo">
+          El Instituto Técnico Superior Cipolletti ofrece una formación de
+          vanguardia en Desarrollo de Software, preparando a los estudiantes
+          para enfrentar los desafíos de la tecnología moderna. Con un enfoque
+          práctico y orientado a la industria, el ITS Cipolletti brinda las
+          herramientas necesarias para convertirse en un profesional altamente
+          capacitado. Aquí, aprenderás a transformar ideas en soluciones
+          tecnológicas, en un entorno que fomenta la innovación, el trabajo en
+          equipo y la resolución de problemas. ¡Únete a nuestra comunidad y
+          lleva tu pasión por la tecnología al siguiente nivel!
+        </p>
+        
+        <!-- Botón para inscribirse -->
+        <button class="boton">Inscribite</button>
+      </div>
+    </div>
+
+    <!-- Pie de página con información del autor o creador -->
+    <footer>
+      <h2 class="piepagina">
+        <span class="dot">By</span>
+        <span class="letter white">unknowncode</span>
+        <i class="fa-solid fa-compass" id="brujula"></i>
+        <span class="letter green">2024</span>
+    </h2>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="script.js"></script>
+  </body>
+</html>
+

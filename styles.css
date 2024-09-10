@@ -1,0 +1,260 @@
+/* Importa las fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+
+/* Definición de variables globales para colores */
+:root{
+    --primary: #0683d6; /* Color primario */
+    --primary-lighter: #66a0c7; /* Tonalidad más clara del primario */
+    --primary-darker: #1c74af; /* Tonalidad más oscura del primario */
+    --white: #fcfcfcf8; /* Color blanco */
+    --surface: rgb(218, 217, 217); /* Color de superficie */
+    --black: #3f3e3e; /* Color negro/gris oscuro */
+    --secondary: #8dc84a; /* Color secundario (verde) */
+}
+
+body{
+    background-color: var(--primary); /* Fondo primario */
+    background-image: url('https://images.unsplash.com/photo-1631624215749-b10b3dd7bca7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGRlc2Fycm9sbG8lMjBkZSUyMHNvZnR3YXJlfGVufDB8fDB8fHww'); /* Imagen de fondo */
+    background-position: 80%; /* Posición de la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    font-family: 'Roboto', sans-serif; /* Usando la fuente Roboto para el cuerpo */
+}
+
+
+.titulo{
+    font-size: 45px; /* Tamaño de fuente del título */
+    margin-left: 20px; /* Margen izquierdo */
+    font-family: 'Poppins', sans-serif; /* Fuente del título */
+}
+
+/* Estilo para el punto */
+.dot {
+    color: var(--secondary); /* Color verde para el punto */
+}
+
+/* Estilo para las letras */
+.letter {
+    font-weight: 700; /* Acentuar el peso del texto si es necesario */
+}
+
+/* Letras blancas */
+.white {
+    color: #fff; /* Color blanco */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra ligera para el texto */
+}
+
+/* Letra verde */
+.green {
+    color: var(--secondary); /* Color verde */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra ligera para el texto */
+}
+
+/* Navegación fuera de pantalla que aparece al hacer clic en el menú */
+.nav {
+    height: 100%; /* Altura completa de la pantalla */
+    width: 100%; /* Anchura del menú */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1; /* Aparece por encima del contenido */
+    top: 0;
+    right: 0; /* Aparece desde el lado derecho */
+    background-color: var(--primary-darker); /* Fondo del menú */
+    overflow-x: hidden; /* Sin desbordamiento horizontal */
+    padding-top: 60px; /* Espaciado superior */
+    transform: translateX(100%); /* Menú inicialmente fuera de la pantalla */
+    transition: transform 0.5s ease; /* Suaviza la transición al abrir/cerrar */
+    display: flex; /* Distribución flexible */
+    justify-content: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto */
+    align-content: center; /* Centra verticalmente */
+}
+
+/* Enlaces dentro del menú */
+.nav a {
+    padding: 8px 8px 8px 32px; /* Espaciado de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 30px; /* Tamaño de fuente */
+    font-family: 'Roboto'; /* Fuente de los enlaces */
+    color: var(--surface); 
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+    justify-content: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto */
+    padding: 10px;
+}
+
+
+#lado-nav{
+    z-index: 2; /* Aparece encima del menú */
+    position: fixed; /* Fijo en la pantalla */
+    right: 0;
+    top: 0;
+    padding: 10px;
+    height: 100vh; /* Altura completa de la ventana */
+    display: flex;
+    flex-direction: column; /* Columnas para los elementos */
+    width: 85px; /* Ancho del menú lateral */
+    padding: 0;
+    transition: transform 0.5s ease;
+}
+
+#lado-nav.closed {
+    transform: translateX(0); /* Menú cerrado */
+}
+
+#lado-nav.open {
+    transform: translateX(-500px); /* Menú abierto */
+}
+
+/* Estilo del botón de barras para abrir/cerrar el menú */
+.bars{
+    align-self: flex-start;
+    width: 100%;
+    height: 60px;
+    background-color: var(--secondary); /* Fondo verde */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilo del ícono de barras */
+#bars{
+    font-size: 30px;
+    color: var(--white); /* Color primario */
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 999;
+}
+
+/* Estilo de los iconos de redes sociales */
+.iconos {
+    display: flex;
+    flex-direction: column; /* Apilado en columna */
+    align-items: center; /* Centrado horizontal */
+    justify-content: center; /* Centrado vertical */
+    flex-grow: 1; /* Ocupa el espacio disponible */
+}
+
+#lado-nav ul{
+    list-style: none; /* Sin viñetas en la lista */
+    margin: 0;
+}
+
+#lado-nav ul li {
+    margin-bottom: 25px; /* Espacio entre ítems */
+}
+
+/* Estilo de los enlaces de los iconos */
+#lado-nav ul li a {
+    text-decoration: none; /* Sin subrayado */
+    color: var(--white) !important; /* Color blanco */
+    font-size: 24px;
+    display: block;
+}
+
+/* Al pasar el cursor sobre los iconos, cambia de color */
+
+.iconos i:hover {
+        color: var(--secondary); /* Color al pasar el mouse */
+    }
+    
+/* Contenedor de iconos */
+.iconos {
+    opacity: 1; /* Opacidad completa */
+    z-index: 2; /* Aparece por encima del contenido */
+    display: flex;
+    align-items: center;
+}
+
+/* Muestra el menú cuando está abierto */
+.nav.open {
+    transform: translateX(0);
+}
+
+/* Contenedor principal del contenido */
+#container{
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    width: 50%; /* Anchura del contenedor */
+    margin-top: 120px;
+    margin-left: 180px;
+    padding: 15px 50px;
+    border-radius: 5px;
+}
+
+/* Estilo del título dentro del contenedor */
+#container h1 {
+    color: var(--white); /* Color blanco */
+    font-weight: 600; /* Negrita */
+}
+
+/* Estilo de los párrafos dentro del contenedor */
+#container p {
+    color: var(--white); /* Color blanco */
+    font-family: 'Roboto'; /* Fuente Roboto */
+}
+
+/* Estilo de los subtítulos */
+#container h3{
+    color: var(--secondary); /* Color verde */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-family: 'Open Sans'; /* Fuente Open Sans */
+    font-size: 20px;
+}
+
+/* Estilo del botón */
+.boton{
+    background-color: var(--secondary); /* Fondo verde */
+    border: solid var(--secondary); /* Borde verde */
+    padding: 8px 13px; /* Espaciado */
+    color: #fff; /* Texto blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 150px; /* Ancho del botón */
+    height: 40px;
+    font-family: 'Open Sans'; /* Fuente Open Sans */
+    font-weight: bold; /* Negrita */
+}
+
+.boton:hover {
+    background-color: var(--primary-lighter); /* Nuevo color de fondo */
+    color: #fff; /* Color del texto al pasar el mouse */
+    border: solid 3px var(--secondary); /* Nuevo color del borde */
+}
+
+.piepagina{
+    font-size: 20px; /* Tamaño de fuente del título */
+    margin-left: 30px; /* Margen izquierdo */
+    font-family: 'Open Sans'; /* Fuente del título */
+}
+
+#brujula{
+    color: var(--white);
+}
+/* Estilos para pantallas pequeñas (menos de 900px) */
+@media(max-width: 900px) {
+    body{
+        background-size: 56% 700px; /* Redimensiona la imagen de fondo */
+    }
+
+    #container{
+        margin-left: 50px;
+        width: 70%; /* Ajusta el tamaño del contenedor */
+    }
+
+    #container h1{
+        font-size: 30px; /* Disminuye el tamaño del título */
+    }
+
+    .btn-join{
+        margin-left: 30px; /* Margen izquierdo ajustado */
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (menos de 600px) */
+@media(max-width: 600px){
+    body{
+        background-image: none; /* Quita la imagen de fondo */
+    }
+}
+
